@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p9@7b+^-(=$k(%c8ozog&s9#lceqilzaou5y2-!*in4d9ii48!'
+SECRET_KEY = 'p9@7b+^-(=$k(%c8ozog&s9#lceqilzaou5y2-!*in4d9ii48!jikajika'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    # 'nosql',
 ]
 
 MIDDLEWARE = [
@@ -75,11 +76,11 @@ WSGI_APPLICATION = 'portal.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'nosql': {
         'ENGINE': 'django.db.backends.djongo',
         'NAME': 'nosql',
     }
@@ -112,6 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+DATABASE_ROUTERS = ['portal.DbRouter.DbRouter', ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
