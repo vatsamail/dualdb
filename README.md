@@ -5,7 +5,7 @@ A method to develop Django based web apps with more than one database. And one o
 - Install Python 3.7.x
 - Create Virtual Environment
 - pip install -r requirements.txt
-- Copy djongo folder from C:\my\ml\virtualenv\dualdb\env\Lib\site-packages\djongo to env\Lib\site-packages\django\db\backends\djongo
+- Copy djongo folder from ...\env\Lib\site-packages\djongo to ...\env\Lib\site-packages\django\db\backends\djongo
 
 ## Projects
 This repository contains two projects. Viz., Portal and Prj.
