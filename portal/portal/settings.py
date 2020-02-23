@@ -82,10 +82,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.djongo',
         'NAME': 'nosql',
-        'HOST': 'mongodb+srv://xxx:xxx@cluster0-sxg6s.gcp.mongodb.net/test?retryWrites=true&w=majority',
-        'USER': 'xxx',
-        'PASSWORD': 'xxx',
     }
+
+    # 'default': {
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'nosql',
+    #     'HOST': 'mongodb+srv://xxx:xxx@cluster0-sxg6s.gcp.mongodb.net/test?retryWrites=true&w=majority',
+    #     'USER': 'xxx',
+    #     'PASSWORD': 'xxx',
+    # }
 }
 
 
